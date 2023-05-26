@@ -19,7 +19,7 @@ function moveon(link) {
 }
 
 const move = document.getElementsByClassName('move');
-for (let i = 0; i < move.length; i += 1) {
+for (i = 0; i < move.length; i += 1) {
   moveon(move[i]);
 }
 
@@ -89,13 +89,12 @@ function loadwindos(index) {
   }
   function listtech() {
     const ultags = document.createElement('ul');
+    const litags = document.createElement('li');
     for (let i = 0; i < 2; i += 1) {
-      const litags = document.createElement('li');
       litags.className = 'norm';
       litags.appendChild(document.createTextNode(projects.tech[i]));
       ultags.appendChild(litags);
     }
-    const litags = document.createElement('li');
     litags.className = 'special';
     litags.appendChild(document.createTextNode(projects.tech[2]));
     ultags.appendChild(litags);
@@ -242,7 +241,7 @@ function showwindow(window, index) {
   });
 }
 
-const showwind = document.getElementsByClassName('showpop');
+const showwind = document.getElementsById('showpop');
 for (let i = 0; i < showwind.length; i += 1) {
   showwindow(showwind[i], i);
 }
