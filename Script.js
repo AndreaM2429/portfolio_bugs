@@ -19,7 +19,7 @@ function moveon(link) {
 }
 
 const move = document.getElementsByClassName('move');
-for (let i = 0; i < move.length; i += 1) {
+for (leti = 0; i < move.length; i += 1) {
   moveon(move[i]);
 }
 
@@ -89,8 +89,8 @@ function loadwindos(index) {
   }
   function listtech() {
     const ultags = document.createElement('ul');
+    const litags = document.createElement('li');
     for (let i = 0; i < 2; i += 1) {
-      litags = document.createElement('li');
       litags.className = 'norm';
       litags.appendChild(document.createTextNode(projects.tech[i]));
       ultags.appendChild(litags);
@@ -241,7 +241,7 @@ function showwindow(window, index) {
   });
 }
 
-const showwind = document.getElementsByClassName('showpop');
+const showwind = document.getElementsById('showpop');
 for (let i = 0; i < showwind.length; i += 1) {
   showwindow(showwind[i], i);
 }
@@ -260,7 +260,7 @@ for (let i = 0; i < hidepop.length; i += 1) {
 /// validation
 let timeout;
 const formval = document.getElementById('formcont');
-formval[1].addEventListener('keydown', function () {
+formval[1].addEventListener('keydown', () => {
   clearTimeout(timeout);
   timeout = setTimeout(() => {
     clearTimeout(timeout);
